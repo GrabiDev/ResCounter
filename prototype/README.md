@@ -25,5 +25,5 @@ For each row:
 * Column `allowable absence` shows number of days you could spend outside the UK without violating `continuous residence` requirement within a year before the arrival date.
 
 ## Allowable absence
-HM Government websites sometimes define `continuous residency` as `at least 6 months in any 12 month period`, other times as `180 days allowable absence in the continuous 12-month period`.
+HM Government websites sometimes define `continuous residency` as `at least 6 months in any 12 month period`, other times describes `allowable absence` as `180 days (...) in the continuous 12-month period`.
 As 180 days is shorter than 6 months (182.5-183 days), this app uses 180 days as a safer bet.
