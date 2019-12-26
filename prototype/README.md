@@ -22,6 +22,6 @@ Table provided in the output shows trips provided in the input, as well as addit
 
 For each row:
 * Column `time out of UK ytd` shows how many days you spent outside the UK  within a year before the arrival date.
-* Column `allowed time out` shows number of days you could spend outside the UK without violating `continuous residency` requirement within a year before the arrival date.
+* Column `allowed time out` shows number of days you could spend outside the UK without violating `continuous residence` requirement within a year before the arrival date.
 
 As HM Government rules are expressed in months, not in days, and some years have 366 days rather than 365, `allowed time out` is computed individually for each entry.
