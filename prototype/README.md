@@ -21,7 +21,9 @@ Application cannot be used to make any claims with HM Government institutions.
 Table provided in the output shows trips provided in the input, as well as additional information computed by the app.
 
 For each row:
-* Column `time out of UK ytd` shows how many days you spent outside the UK  within a year before the arrival date.
-* Column `allowed time out` shows number of days you could spend outside the UK without violating `continuous residence` requirement within a year before the arrival date.
+* Column `time out of UK` shows how many days you spent outside the UK  within a year before the arrival date.
+* Column `allowable absence` shows number of days you could spend outside the UK without violating `continuous residence` requirement within a year before the arrival date.
 
-As HM Government rules are expressed in months, not in days, and some years have 366 days rather than 365, `allowed time out` is computed individually for each entry.
+## Allowable absence
+HM Government websites sometimes define `continuous residency` as `at least 6 months in any 12 month period`, other times as `180 days allowable absence in the continuous 12-month period`.
+As 180 days is shorter than 6 months (182.5-183 days), this app uses 180 days as a safer bet.

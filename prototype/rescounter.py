@@ -16,7 +16,7 @@ df = pd.read_csv(args.infile, header=0, parse_dates=[0,1], dayfirst=True)
 df['duration'] = df['arrival']-df['departure']
 df['adjusted'] = df['duration'] - timedelta(days=1)
 cum_sum_series = pd.Series(index=df.index)
-out_of_series = pd.Series(index=df.index)
+# out_of_series = pd.Series(index=df.index)
 
 for index, row in df.iterrows():
     start_date = row['arrival'] - pd.DateOffset(months=12)
@@ -31,9 +31,11 @@ for index, row in df.iterrows():
     cum_sum_series.iloc[index] = last_year_df['adjusted'].sum() - deduct_extra_days
 
     # calculate how many days you could be out for in the last 12 months
-    out_of_series.iloc[index] = np.floor((row['arrival'] - start_date).days/2)
+    # out_of_series.iloc[index] = np.floor((row['arrival'] - start_date).days/2)
 
 # preparing output
-df['time out of UK ytd'] = pd.to_timedelta(cum_sum_series, unit='D')
-df['allowed time out'] = pd.to_timedelta(out_of_series, unit='D')
-print(df[['departure', 'arrival', 'description', 'time out of UK ytd', 'allowed time out']])
+df['time out of UK'] = pd.to_timedelta(cum_sum_series, unit='D')
+# df['allowed time out'] = pd.to_timedelta(out_of_series, unit='D')
+df['allowable absence'] = 180
+df['allowable absence'] = pd.to_timedelta(df['allowable absence'], unit='D')
+print(df[['departure', 'arrival', 'description', 'time out of UK', 'allowable absence']])
