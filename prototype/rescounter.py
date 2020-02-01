@@ -15,7 +15,7 @@ df = pd.read_csv(args.infile, header=0, parse_dates=[0,1], dayfirst=True)
 # performing computations
 df['duration'] = df['arrival']-df['departure']
 df['adjusted'] = df['duration'] - timedelta(days=1)
-cum_sum_series = pd.Series(index=df.index)
+cum_sum_series = pd.Series(index=df.index, dtype='object')
 # out_of_series = pd.Series(index=df.index)
 
 for index, row in df.iterrows():
