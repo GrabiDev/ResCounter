@@ -10,3 +10,7 @@ Application cannot be used to make any claims with HM Government institutions.
 ## Current progress
 Working Python prototype is available in `prototype` directory.
 Details on the prototype are in the `README.md` file in `prototype` directory.
+
+Progressive Web App is currently being built.
+`webapp` directory contains its source code in Angular.
+`README.md` file within `webapp` directory contains details on how to run an Angular app.
